@@ -8,10 +8,10 @@ class DisplayMessages extends Component {
   return (
     <div className="DisplayMessages">
 
-        {this.props.messages.map(message => {
+        {this.props.messages.map((message,username) => {
             return(
 
-                <Message   text={message} username={message} />
+                <Message   text={message} username={username} />
 
 
             )

@@ -6,7 +6,7 @@ import SidePanel from '../SidePanel/SidePanel';
 
 
 
-class App extends Component {
+class MessagePanel extends Component {
 
 
 
@@ -46,13 +46,14 @@ class App extends Component {
   render()
  { return (
     <div className="App">
-      <SidePanel users={this.state.usernames}/>
+      <SidePanel />
       <DisplayMessages messages={this.state.messages}/>
       <MessageBox sendMessage={this.sendMessage}
       />
+      
      
     </div>
   );}
 }
 
-export default App;
+export default MessagePanel;

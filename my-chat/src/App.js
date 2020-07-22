@@ -22,34 +22,7 @@ class App extends Component{
       this.setState({username})
       }
 
-      componentDidMount() {
-
-
     
-        //event listener
-        this.connection.onmessage = (message) => {
-    
-        const data = JSON.parse(message.data)
-        this.setState({messages: [...this.state.messages, data]})
-    
-    
-    }
-    }
-    
-    
-    
-    
-        getMessage = (message) => {
-    
-            const data= {username: this.props.username, message: message}
-            this.connection.send(JSON.stringify(data))
-        }
-    
-    
-
-      
-
-      connection = new WebSocket('ws://localhost:9090/')
   
     render(){
         return (
