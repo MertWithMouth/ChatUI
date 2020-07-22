@@ -15,7 +15,7 @@ class MessageBox extends Component {
 
     submitHandler=(e)=>{
         e.preventDefault();
-        console.log(this.state.message)
+       this.props.sendMessage(this.state.message)
        
     }
 
@@ -26,7 +26,7 @@ class MessageBox extends Component {
 
         <form className="sendmessageform" onSubmit={this.submitHandler} > 
              <input type ='text' placeholder="Type your message"
-             onChange={this.MessageHandler} 
+             onChange={this.messageHandler} 
              />
              <button type='submit'>Send</button>
         </form>

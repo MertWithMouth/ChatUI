@@ -27,26 +27,14 @@ class App extends Component {
 
   }
 
- getMessage(message){
+ 
 
 
-  this.setState({messages: 
-  [...this.state.messages, 'namer']})
-
-
-
-  
-  
-
-
- }
-
-
- sendMessage=(message)=>{
+ sendMessage=(text)=>{
 
   this.setState({messages:
-  [...this.state.messages, message]})
-    
+  [...this.state.messages, text]})
+  console.log(this.state.messages)
   
  }
 
