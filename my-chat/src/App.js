@@ -12,7 +12,8 @@ class App extends Component {
 
     
     state={
-      messages:[]
+      messages:[],
+      usernames:[]
           }
     
     
@@ -45,7 +46,7 @@ class App extends Component {
   render()
  { return (
     <div className="App">
-      <SidePanel users={this.state.messages.userid}/>
+      <SidePanel users={this.state.usernames}/>
       <DisplayMessages messages={this.state.messages}/>
       <MessageBox sendMessage={this.sendMessage}
       />
