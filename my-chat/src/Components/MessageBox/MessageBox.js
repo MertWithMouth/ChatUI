@@ -3,24 +3,35 @@ import React, { Component } from 'react';
 
 class MessageBox extends Component {
 
-    MessageHandler=(e)=>{
-
-        e.preventDefault()
-        this.props.addmessage(e.target.value)
-        e.target.value=''
-        
-
+    state={
+        message:''
     }
+
+    messageHandler=(e) =>{
+        
+        this.setState({message: e.target.value})
+        
+    }
+
+    submitHandler=(e)=>{
+        e.preventDefault();
+        console.log(this.state.message)
+       
+    }
+
+    
    render(){
         return (
-    <div className="DisplayMessages" >
+  
 
-        <section  onSubmit={this.MessageHandler}> 
-             <input type ='text'  />
+        <form className="sendmessageform" onSubmit={this.submitHandler} > 
+             <input type ='text' placeholder="Type your message"
+             onChange={this.MessageHandler} 
+             />
              <button type='submit'>Send</button>
-        </section>
+        </form>
      
-    </div>
+   
   );}
 }
 

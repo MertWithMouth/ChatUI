@@ -12,20 +12,7 @@ class App extends Component {
 
     
     state={
-      messages:[
-        {
-        userid: 'Mert',
-        text: 'Naber'
-        },
-        {
-          userid: 'Katarina',
-          text: 'Whats up'
-          },
-          {
-            userid: 'Tyler',
-            text: 'Missed you buddy'
-            },
-    ]
+      messages:[]
           }
     
     
@@ -40,16 +27,28 @@ class App extends Component {
 
   }
 
- getMessage=(message)=>{
+ getMessage(message){
+
+
+  this.setState({messages: 
+  [...this.state.messages, 'namer']})
 
 
 
-  this.setState({messages: [...this.state.messages, message]})
+  
   
 
 
  }
 
+
+ sendMessage=(message)=>{
+
+  this.setState({messages:
+  [...this.state.messages, message]})
+    
+  
+ }
 
  
 
@@ -60,7 +59,8 @@ class App extends Component {
     <div className="App">
       <SidePanel users={this.state.messages.userid}/>
       <DisplayMessages messages={this.state.messages}/>
-      <MessageBox addmessage={this.getMessage}/>
+      <MessageBox sendMessage={this.sendMessage}
+      />
      
     </div>
   );}

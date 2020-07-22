@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import Message from '../Message/Message'
-const dummy_data=[
 
-    
-
-]
 
 
 class DisplayMessages extends Component {
