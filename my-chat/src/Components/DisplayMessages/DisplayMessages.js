@@ -11,7 +11,7 @@ class DisplayMessages extends Component {
         {this.props.messages.map((message,index) => {
             return(
 
-                <Message key={index}  text={message}/>
+                <Message key={index}  text={message.text} />
 
 
             )

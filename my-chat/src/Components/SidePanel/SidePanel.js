@@ -1,14 +1,36 @@
 import React, { Component } from 'react';
 
 
-class SidePanel extends Component {
-    render(){
-  return (
-    <div className="DisplayMessages">
+ const dummy_data=[ 
+     
+    {username: 'Mark'},
+    {username: 'Mert'},
+    {username: 'Melih'},
+    
+]
 
-       
-    </div>
-  );}
+
+   
+
+ 
+
+
+class SidePanel extends Component{
+
+
+
+
+    render(){
+        return (
+            <div className="sidepanel">
+
+
+            </div>
+          );
+
+
+        
+    }
 }
 
 export default SidePanel;

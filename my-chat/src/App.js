@@ -1,58 +1,72 @@
 import React, { Component } from 'react';
-import DisplayMessages from './Components/DisplayMessages/DisplayMessages';
-import MessageBox from  './Components/MessageBox/MessageBox';
-import SidePanel from './Components/SidePanel/SidePanel';
-
-
 import './App.css';
 
-class App extends Component {
+import Login from './Components/Login/Login'
+import MessagePanel from './Components/MessagePanel/MessagePanel'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import {faUser} from '@fortawesome/free-solid-svg-icons'
+
+library.add(faUser)
+
+class App extends Component{
 
 
-
-    
-    state={
-      messages:[],
-      usernames:[]
-          }
-    
-    
-
-
-    
   
-
-  componentDidMount=()=>{
-
-//data for backend
-
+  state = {
+    
+    username: null
   }
 
- 
+    setUsername = (username) =>{
+
+      this.setState({username})
+      }
+
+      componentDidMount() {
 
 
- sendMessage=(text)=>{
+    
+        //event listener
+        this.connection.onmessage = (message) => {
+    
+        const data = JSON.parse(message.data)
+        this.setState({messages: [...this.state.messages, data]})
+    
+    
+    }
+    }
+    
+    
+    
+    
+        getMessage = (message) => {
+    
+            const data= {username: this.props.username, message: message}
+            this.connection.send(JSON.stringify(data))
+        }
+    
+    
 
-  this.setState({messages:
-  [...this.state.messages, text]})
-  console.log(this.state.messages)
+      
+
+      connection = new WebSocket('ws://localhost:9090/')
   
- }
+    render(){
+        return (
+            <div className="App">
+              {
+              !this.state.username ?
+                <Login setUsername={this.setUsername}/>
+                :
+                <MessagePanel className='messagepanel' username = {this.state.username}/>
+              }
+            </div>
+          );
 
- 
 
-
-
-  render()
- { return (
-    <div className="App">
-      <SidePanel users={this.state.usernames}/>
-      <DisplayMessages messages={this.state.messages}/>
-      <MessageBox sendMessage={this.sendMessage}
-      />
-     
-    </div>
-  );}
+        
+    }
 }
 
 export default App;
+
