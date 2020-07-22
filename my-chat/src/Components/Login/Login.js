@@ -24,7 +24,7 @@ class Login extends Component{
     render(){
         return (
             <div className='LoginPage'>
-            <div class= 'wrap'>
+            <div className= 'wrap'>
             <div className="loginOuterContainer">
                 <div className="imagecontainer">  
               <img src= {Podo}/>
@@ -35,7 +35,7 @@ class Login extends Component{
                     <span className= 'title'>Welcome to Jotform Chat</span>
                     <div className='logininput'>
                         
-                    <span class = 'icon'><FontAwesomeIcon icon='user' /></span>
+                    <span className = 'icon'><FontAwesomeIcon icon='user' /></span>
                     <input placeholder='@UserName' type='text'id = 'username'/>
                     
                     </div>

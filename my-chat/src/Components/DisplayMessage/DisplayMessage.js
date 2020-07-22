@@ -4,14 +4,15 @@ import Message from '../Message/Message'
 
 
 class DisplayMessages extends Component {
+  
     render(){
   return (
     <div className="DisplayMessages">
 
-        {this.props.messages.map((message,username) => {
+        {this.props.messages.map((message,index) => {
             return(
 
-                <Message   text={message} username={username} />
+                <Message  key={index} text={message} />
 
 
             )

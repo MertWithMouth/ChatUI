@@ -12,9 +12,12 @@ class MessagePanel extends Component {
 
     
     state={
-      messages:[]
+      messages:[],
+      usernames:['mert','naber']
       
           }
+    
+
     
     
 
@@ -35,7 +38,7 @@ class MessagePanel extends Component {
 
   this.setState({messages:
   [...this.state.messages, text]})
-  console.log(this.state.messages.text)
+  
   
  }
 
@@ -46,8 +49,10 @@ class MessagePanel extends Component {
   render()
  { return (
     <div className="App">
-      <SidePanel />
+      
+      <SidePanel users={this.state.usernames}/>
       <DisplayMessages messages={this.state.messages}/>
+     
       <MessageBox sendMessage={this.sendMessage}
       />
       
