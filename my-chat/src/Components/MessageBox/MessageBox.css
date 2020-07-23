@@ -12,15 +12,15 @@
     align-content: center;
     align-items: center;
     grid-gap: 15px;
-    grid-area: chat-form;
+    grid-area:sendmessageform;
     border-radius: 0 0 10px 0;
     border-top: 1px solid rgba(0,0,0,0.25);
-    padding-left: 42px;
-    padding-right: 22px;
+    
+    
   }
   
 input {
-    width: 100%;
+    width: 100px;
     outline: none;
     padding: 15px;
     border: 2px solid #ddd;

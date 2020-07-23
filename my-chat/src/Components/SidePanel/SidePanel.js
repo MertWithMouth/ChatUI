@@ -20,7 +20,7 @@ userHandler=()=>{
 
     render(){
         return (
-            <div className="sidepanel">
+            <div className="SidePanel">
             <h3>User List</h3>
             
                 {this.props.users.map((user,index) => {

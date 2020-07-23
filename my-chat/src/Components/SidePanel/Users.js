@@ -10,7 +10,7 @@ const users =(props) => {
     <div className="UserList" >
 
         <div className='users'>
-        <div className='userid' onClick={props.userHandler} >{props.username}</div>
+        <div className='userid' >{props.username}</div>
         </div>
      
     </div>

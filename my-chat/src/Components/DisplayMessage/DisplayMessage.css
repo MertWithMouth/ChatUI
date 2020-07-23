@@ -1,12 +1,12 @@
 .DisplayMessage{   
-     grid-area: DisplayMessage;
+    grid-area: DisplayMessage;
     display: flex;
     flex-direction: column-reverse;
     padding: 0 20px;
     overflow-y: scroll;
   }
-  
-  .messagerow {
+
+  .message-row {
     display: grid;
     grid-template-columns: 70%;
     margin-bottom: 20px;
@@ -16,6 +16,27 @@
     display: grid;
   }
   
+  .you-message {
+    justify-content: end;
+  }
+  
+  .you-message .messagedata {
+    justify-items: end;
+  }
+  
+  .other-message {
+    justify-items: start;
+  }
+  
+  .other-message .messagedata {
+    grid-template-columns: 48px 1fr;
+    grid-column-gap: 15px;
+  }
+  
+  .message-row img {
+    border-radius: 100%;
+    grid-row: span 2;
+  }
   
   .userid {
     font-size: 1.3rem;
@@ -28,3 +49,16 @@
     margin-bottom: 5px;
   }
   
+  .you-message .textmessage {
+    background: #0048AA;
+    color: #eee;
+    border: 1px solid #0048AA;
+    border-radius: 14px 14px 0 14px;
+  }
+  
+  .other-message .textmessage {
+    background: #eee;
+    color: #111;
+    border: 1px solid #ddd;
+    border-radius: 14px 14px 14px 0;
+  }
