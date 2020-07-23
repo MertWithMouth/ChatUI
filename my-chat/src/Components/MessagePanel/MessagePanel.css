@@ -5,55 +5,25 @@
   box-sizing: border-box;
 }
 
-html, 
-body {
-  height: 100%;
-}
-
-html {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(to right, #57c1eb 0%,#246fa8 100%);
-  font-size: 10px;
-}
-
-body {
-  display: grid;
-  place-items: center center;
-}
 
 ::-webkit-scrollbar {
   display: none;
 }
 .MessagePanel {
   
+  margin: auto;
   display: grid;
-  grid:
-      'toplayout' 71px
-      'DisplayMessage SidePanel ' 1fr
-      'sendmessageform' 78px
-      / 275px 1fr;
+  grid-area: 'SidePanel DisplayMessage DisplayMessage DisplayMessage DisplayMessage'
+             'SidePanel sendmessageform sendmessageform sendmessageform sendmessageform sendmessageform';
+ 
   min-width: 800px;
   max-width: 1000px;
   max-height: 800px;
   width: 100%;
   height: 95vh;
-  background: #FFF;
-  
+  background: rgb(148, 34, 34);
+  border-radius: 5px;
   border-radius: 10px;
 }
 
 
-#toplayout {
-  display: grid;
-  grid: 36px / 1fr 36px;
-  align-content: center;
-  align-items: center;
-  grid-area: chat-title;
-  background: #eee;
-  color: #0048AA;
-  font-weight: bold;
-  font-size: 2.0rem;
-  border-radius: 0 10px 0 0;
-  box-shadow: 0 1px 3px -1px rgba(0,0,0,0.75);
-  padding: 0 20px;
-}
