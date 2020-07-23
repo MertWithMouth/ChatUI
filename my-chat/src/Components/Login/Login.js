@@ -17,7 +17,7 @@ class Login extends Component{
 
     }
     
-
+    
 
 
 
@@ -27,7 +27,7 @@ class Login extends Component{
             <div className= 'wrap'>
             <div className="loginOuterContainer">
                 <div className="imagecontainer">  
-              <img src= {Podo}/>
+              <img src= {Podo} alt='podo'/>
               </div>
 
               <form className="loginform" onSubmit={this.login}>  

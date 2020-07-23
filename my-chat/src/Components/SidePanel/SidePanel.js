@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import Users from './Users'
 
- const dummy_data=[ 
-     
-    {username: 'Mark'},
-    {username: 'Mert'},
-    {username: 'Melih'},
-    
-]
+
 
 
    
@@ -17,17 +11,23 @@ import Users from './Users'
 
 class SidePanel extends Component{
 
+userHandler=()=>{
 
+
+
+}
 
 
     render(){
         return (
             <div className="sidepanel">
- {this.props.users.map((user,index) => {
+            <h3>User List</h3>
+            
+                {this.props.users.map((user,index) => {
             return(
-
-                <Users  key={index} username={user} />
-
+                
+                <Users  key={index} username={user} userHandler={this.userHandler} />
+               
 
             )
         })}
