@@ -58,7 +58,7 @@ class MessagePanel extends Component {
     <div className="messagepanel">
       
       <SidePanel users={this.state.usernames}/>
-      <DisplayMessages messages={this.state.messages}/>
+      <DisplayMessages messages={this.state.messages} username={this.props.username}/>
      
       <MessageBox sendMessage={this.sendMessage}
       />

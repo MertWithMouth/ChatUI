@@ -9,7 +9,7 @@ const message =(props) => {
     <div className="message" >
 
         <div className='userid'>{props.username}</div>
-         <div className='textmessage'>{props.text}</div>
+        <div className='textmessage'>{props.text}</div>
      
     </div>
   );
