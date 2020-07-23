@@ -9,8 +9,9 @@ const users =(props) => {
         return (
     <div className="UserList" >
 
+        <div className='users'>
         <div className='userid' onClick={props.userHandler} >{props.username}</div>
-        
+        </div>
      
     </div>
   );

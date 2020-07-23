@@ -1,10 +1,5 @@
-#sidepanel {
-    grid-area: sidepanel;
-    background: #0048AA;
-    overflow-y: scroll;
-}
-
-.UserList {
+.users {
+    
     display: grid;
     grid-template-columns: 40px 1fr max-content;
     grid-gap: 10px;
@@ -12,6 +7,12 @@
     font-size: 1.3rem;
     border-bottom: 1px solid #002C88;
     padding: 20px 20px 20px 15px;
+}
+
+.UserList {
+    grid-area: conversation-list;
+    background: #0048AA;
+    overflow-y: scroll;
   }
   
  
