@@ -1,25 +1,15 @@
-
-  .messagepanel {
-    
-    width: 100%;
-    margin: 0 auto;
-    
+.messagepanel {
+  
+  display: grid;
+  grid:
+     
+      'DisplayMessages sidepanel' 1fr
+      'sendmessageform' 1fr;
+  min-width: 800px;
+  max-width: 1000px;
+  max-height: 800px;
+  width: 100%;
+  height: 95vh;
+  background: #FFF;
+  border-radius: 10px;
 }
-
-.outercontent{
-    margin: auto;
-    width: 960px;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-}
-
-
-
-
-
-
-

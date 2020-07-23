@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Users from './Users'
 
-
+import './SidePanel.css'
 
 
    

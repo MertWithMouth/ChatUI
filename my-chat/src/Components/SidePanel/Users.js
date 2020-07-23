@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './SidePanel.css'
 
 const users =(props) => {
 
@@ -7,7 +7,7 @@ const users =(props) => {
     
 
         return (
-    <div className="message" >
+    <div className="UserList" >
 
         <div className='userid' onClick={props.userHandler} >{props.username}</div>
         

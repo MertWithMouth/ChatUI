@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from'react-dom'
-import Message from '../Message/Message'
+import Message from './Message'
 import './DisplayMessage.css'
 
 
