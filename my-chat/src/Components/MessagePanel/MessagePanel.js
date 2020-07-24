@@ -56,12 +56,15 @@ class MessagePanel extends Component {
   render()
  { return (
     <div className="MessagePanel">
-      <div className= 'toplayout'></div>
+       
       <SidePanel users={this.state.usernames} />
+      
       <DisplayMessages messages={this.state.messages} username={this.props.username}/>
+      
      
-      <MessageBox sendMessage={this.sendMessage}
-      />
+      <MessageBox sendMessage={this.sendMessage} />
+    
+     
       
      
     </div>

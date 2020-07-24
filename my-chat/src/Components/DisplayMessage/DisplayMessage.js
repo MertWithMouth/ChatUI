@@ -28,7 +28,7 @@ class DisplayMessages extends Component {
   
     render(){
   return (
-    <div className="DisplayMessages">
+    <div className="DisplayMessage">
 
         {this.props.messages.map((message,index) => {
             return(

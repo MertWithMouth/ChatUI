@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './MessageBox.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class MessageBox extends Component {
 
@@ -26,6 +27,8 @@ class MessageBox extends Component {
   
 
         <form className="sendmessageform" onSubmit={this.submitHandler} > 
+
+            <span className = 'attachment'><FontAwesomeIcon icon='user' /></span>
              <input type ='text' placeholder="Type your message"
              onChange={this.messageHandler} 
              value={this.state.message}

@@ -1,30 +1,21 @@
 .sendmessageform {
-    background: #eee;
+    background: var(--send-message-form);
+    display: flex;
   }
   
-  .sendmessageform > img {
-    cursor: pointer;
+  .sendmessageform input {
+    width: 100%;
+    padding: 15px 10px;
+    margin: 0;
+    border-style: none;
+    background: var(--send-message-form);
+    font-weight: 200;
+  
   }
   
-.sendmessageform{
-    display: grid;
-    grid: 51px / 32px 1fr;
-    align-content: center;
-    align-items: center;
-    grid-gap: 15px;
-    grid-area:sendmessageform;
-    border-radius: 0 0 10px 0;
-    border-top: 1px solid rgba(0,0,0,0.25);
-    
-    
-  }
+
+
+
+ 
   
-input {
-    width: 100px;
-    outline: none;
-    padding: 15px;
-    border: 2px solid #ddd;
-    color: #330;
-    border-radius: 6px;
-    font-size: 1.4rem;
-  }
+
