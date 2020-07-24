@@ -1,4 +1,15 @@
-.SidePanel{
+.SidePanel {
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: var(--main-color);
+    overflow: hidden;
+    height: 100%;
+  }
+  
+.userPanel{
 
     border: 1px solid black;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    margin: auto;
 }

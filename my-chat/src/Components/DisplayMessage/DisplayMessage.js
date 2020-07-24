@@ -33,7 +33,7 @@ class DisplayMessages extends Component {
         {this.props.messages.map((message,index) => {
             return(
 
-                <Message  key={index} text={message} username={this.props.username} />
+                <Message  key={index} text={message} isMymessage={message.isMymessage} username={this.props.username} />
 
 
             )
