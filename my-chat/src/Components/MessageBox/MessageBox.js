@@ -28,7 +28,8 @@ class MessageBox extends Component {
 
         <form className="sendmessageform" onSubmit={this.submitHandler} > 
 
-            <span className = 'attachment'><FontAwesomeIcon icon='user' /></span>
+            <span className = 'attachment'><FontAwesomeIcon icon='faPaper' /></span>
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
              <input type ='text' placeholder="Type your message"
              onChange={this.messageHandler} 
              value={this.state.message}

@@ -1,5 +1,5 @@
 import React from 'react';
-import './SidePanel.css'
+import './Users.css'
 
 const users =(props) => {
 
@@ -9,9 +9,9 @@ const users =(props) => {
         return (
     <div className="UserList" >
 
-        <div className='users'>
-        <div className='userid' >{props.username}</div>
-        </div>
+        
+        <div className='userid' >@{props.username}</div>
+       
      
     </div>
   );

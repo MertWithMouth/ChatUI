@@ -29,7 +29,7 @@ class DisplayMessages extends Component {
     render(){
   return (
     <div className="DisplayMessage">
-
+      <div className='message-container'>
         {this.props.messages.map((message,index) => {
             return(
 
@@ -38,7 +38,7 @@ class DisplayMessages extends Component {
 
             )
         })}
-     
+     </div>
     </div>
   );}
 }

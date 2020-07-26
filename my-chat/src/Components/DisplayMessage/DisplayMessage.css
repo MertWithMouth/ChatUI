@@ -1,6 +1,14 @@
 .DisplayMessage{
 
-  width: 480px;
+ 
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding-left: 6px;
+  width: 100%;
+  height: 100%;
+  
+  background: var(--secondary-color);
+
 }
 
 .message-row {
@@ -55,4 +63,25 @@
   color: #111;
   border: 1px solid #ddd;
   border-radius: 14px 14px 14px 0;
+}
+
+.DisplayMessage::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.DisplayMessage::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+.DisplayMessage::-webkit-scrollbar-thumb {
+  background: rgb(185, 119, 18); 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.DisplayMessage::-webkit-scrollbar-thumb:hover {
+  background:rgb(224, 138, 9);; 
 }

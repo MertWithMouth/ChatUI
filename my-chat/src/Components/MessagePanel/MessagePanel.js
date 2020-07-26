@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import DisplayMessages from '../DisplayMessage/DisplayMessage';
 import MessageBox from  '../MessageBox/MessageBox';
 import SidePanel from '../SidePanel/SidePanel';
+import Layout from './Layout'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './MessagePanel.css'
 
 
@@ -13,7 +15,7 @@ class MessagePanel extends Component {
     
     state={
       messages:[],
-      usernames:['mert','naber']
+      usernames:['mert','naber','mert','naber','mert','naber','mert','naber','mert','naber','mert','naber','mert','naber','mert','naber','mert','naber','mert','naber','mert','naber','mert','naber','mert','naber','mert','naber','mert','naber',]
       
           }
     
@@ -56,7 +58,9 @@ class MessagePanel extends Component {
   render()
  { return (
     <div className="MessagePanel">
-       
+
+    <Layout/>
+    
       <SidePanel users={this.state.usernames} />
       
       <DisplayMessages messages={this.state.messages} username={this.props.username}/>

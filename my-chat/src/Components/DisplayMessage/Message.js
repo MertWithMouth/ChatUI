@@ -20,7 +20,7 @@ const message =(props) => {
     
       <div className='messageClass'>
         <div className='messagedata'>
-            <div className='userid'>{props.username}</div>
+            <div className='userid'>{props.username}: {props.text}</div>
             <div className='textmessage'>{props.text}</div>
         </div>
       </div>
